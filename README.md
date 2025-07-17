@@ -1,5 +1,7 @@
 # Goal
 I have always wanted to read and do all the exercises in the book "Structure and Interpretation of Computer Programs" - Scheme Version, but never got time. Now in the year 2025, I joined an Institution as an Assistant Professor and got loads of time.
+
+
 ![The Wizard that inhibits our Computers](https://github.com/nirmAtA-dev/SICP/blob/main/sicp_img.png)
 ## Chapter and Exercises Number 
 | Chapter Name                                                 | Number of Exercises |
