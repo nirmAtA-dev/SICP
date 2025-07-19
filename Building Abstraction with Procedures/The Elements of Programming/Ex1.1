@@ -1,0 +1,44 @@
+#lang sicp
+; Exercise 1.1: Below is a sequence of expressions. What is
+; the result printed by the interpreter in response to each ex-
+; pression? Assume that the sequence is to be evaluated in
+; the order in which it is presented.
+
+
+
+; below is a primitive expression
+10                       ;==> 10
+; below is means of combination to create compound elements
+(+ 5 3 4)                ;==> 12
+(- 9 1)                  ;==> 8
+(/ 6 2)                  ;==> 3
+(+ (* 2 4) (- 4 6))      ;==> 6
+; below are means of abstraction the most minimalistic is just below
+; rest are a combination of all three principle
+(define a 3)             ;==> No output as it creates an environment inside its ()
+;above creates an environment where we define a as 3
+(define b (+ a 1))       ;==> No output as it creates an environment inside its ()
+(+ a b (* a b))          ;==> 19
+(= a b)                  ;==> #f means false
+; (if <predicate> <consequent> <alternative>)
+; (and <e1> ... <e2>) <e> means expression 
+(if (and (> b a)(< b (* a b)))
+    b
+    a)                   ;==> 4
+; (cond (<p1> <e1>)
+;       (<p2> <e2>)
+;       ...
+;       (<pn> <en>))    <p> == predicate and <e> == expression
+; if predicate is true expression is evaluated
+(cond ((= a 4) 6)
+      ((= b 4) (+ 6 7 a))
+      (else 25))         ;==> 16
+
+(+ 2 (if (> b a) b a))   ;==> 6
+
+(* (cond ((> a b) a)
+         ((< a b) b)
+         (else -1))
+   (+ a 1))              ;==> 16
+
+
